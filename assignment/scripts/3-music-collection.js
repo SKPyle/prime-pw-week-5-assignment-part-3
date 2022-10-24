@@ -19,10 +19,8 @@ const collection = [];
 }       //end addToCollection
 */
 
-function addToCollection(albumTitle, artist, yearPublished){
+function addToCollection(albumTitle, artist, yearPublished){         //should add new objects to our collection array
     console.log('in addToCollection', albumTitle, artist, yearPublished);
-    
-    
     collection.push({albumTitle, artist, yearPublished});
     return collection;
     
@@ -34,36 +32,25 @@ addToCollection('Led Zeppelin III', 'Led Zeppelin', '1970');
 addToCollection('Led Zeppelin','IV','1971');
 addToCollection('The Grey Album', 'The Bartles', '1967');
 addToCollection('Ayudame', 'The Bartles', '1975');
-addToCollection('Parliament','Mothership Connection','1975');
+addToCollection('Parliament','Mothership Connection','1979');
 console.log(collection);
 
+function showCollection(){       //Should loop through showCollection and console.log object values.
+  console.log(collection.length);
+    for (var i = 0; i < collection.length; i++) {
+    console.log(collection[i]);
+    //Do something
+}
+}
+showCollection();
 
+const artist = [];
+function findByArtist(artist){
+    console.log('In findByArtist');
 
+}
 
-/*> While working through the features below, make sure to commit after you complete a task! Your commit message should reflect what you added or changed since the previous commit.
-
-### Required Features
-
-- Create a variable `collection` that starts as an empty array.
-
-- Add a function named `addToCollection`. This function should:
-  - Take in the album's `title`, `artist`, `yearPublished` as input parameters
-  - Create a new object having the above properties
-  - Add the new object to the end of the `collection` array
-  - Return the newly created object
-
-- Test the `addToCollection` function:
-  - Add 6 albums to your collection. Aim to have a mix of both same and different artists and published years. (Feel free to share your musical interests, or make stuff up. Totally fine either way.)
-  - Console.log each album as added using the returned value.
-  - After all are added, console.log the `collection` array.
-
-- Add a function named `showCollection`. This function should:
-  - Take in an array parameter. (This allows it to be reused to show any collection, like the results from the find or search.)
-  - Console.log the number of items in the array.
-  - Loop over the array and console.log each album's information formatted like: `TITLE by ARTIST, published in YEAR`.
-
-- Test the `showCollection` function.
-
+/* 
 - Add a function named `findByArtist`. This function should:
   - Take in `artist` (a string) parameter
   - Create an array to hold any results, empty to start
@@ -102,4 +89,3 @@ console.log(collection);
 ```
 
 > Make sure to test all your code!*/
-
